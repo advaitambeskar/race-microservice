@@ -1,5 +1,5 @@
 const { Pool, Client } = require('pg');
-var connectionString = "postgres://postgres:postgres@localhost:5433/racenergy";
+var connectionString = "postgres://postgres:postgres@localhost:5432/racenergy";
 const client = new Client({
         connectionString: connectionString
 });
@@ -29,7 +29,7 @@ async function createDB() {
                 host: "localhost",
                 database: "racenergy",
                 password: "postgres",
-                port: "5433"
+                port: "5432"
         });
         pool.connect();
         pool.query(
